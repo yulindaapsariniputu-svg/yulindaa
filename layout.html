@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Layout Website Table - Yulinda</title>
+  <style>
+    :root { --primary: #a14f78; --secondary: #f4d0d9; --accent: #ffd1dc; }
+    body { margin: 0; font-family: 'Britannic Bold', sans-serif; background: var(--secondary); }
+    
+    nav { background: var(--primary); padding: 15px; text-align: center; }
+    nav a { color: white; text-decoration: none; margin: 0 15px; font-weight: bold; }
+
+    table { width: 100%; height: 85vh; border-collapse: collapse; background: white; }
+    td { border: 2px solid #ffffff; text-align: center; }
+    
+    .header-box { background: var(--primary); color: white; height: 100px; }
+    .sidebar { background: var(--accent); width: 25%; color: var(--primary); vertical-align: top; padding-top: 30px; }
+    .main-content { background: #fffafa; vertical-align: top; padding: 40px; color: #4a4a4a; }
+    
+    /* Footer sudah ungu senada */
+    .footer-box { background: var(--primary); color: white; height: 60px; }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="index.html">Beranda</a>
+    <a href="pendidikan.html">Pendidikan</a>
+    <a href="skil.html">Skill</a>
+    <a href="layout.html">Layout Table</a>
+    <a href="kalkulator&form.html">Kalkulator&form</a>
+  </nav>
+
+  <table>
+    <tr>
+      <td colspan="2" class="header-box">
+        <h1>WEBSITE HEADER YULINDA</h1>
+      </td>
+    </tr>
+    <tr>
+      <td class="sidebar">
+        <h3>Navigasi Samping</h3>
+        <p>✨ Profil Utama</p>
+        <p>🎓 Pendidikan</p>
+        <p>💡 Keahlian</p>
+      </td>
+      <td class="main-content">
+        <h2>Main Content Area</h2>
+        <p>Halaman ini menggunakan struktur <b>HTML Table</b>.</p>
+        <p>Warna sudah disesuaikan agar tetap cantik dan senada!</p>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2" class="footer-box">
+        <p>© 2026 Layout Design by Ni Putu Yulinda Apsari</p>
+      </td>
+    </tr>
+  </table>
+
+</body>
+</html>

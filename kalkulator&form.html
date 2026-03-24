@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>FORM & CALCULATOR - Yulinda</title>
+
+<style>
+:root {
+    --primary: #a14f78;
+    --secondary: #f4d0d9;
+    --accent: #ffd1dc;
+    --white: #ffffff;
+}
+
+body {
+    margin: 0;
+    font-family: 'Britannic Bold', sans-serif;
+    background: var(--secondary); /* Background senada pink */
+}
+
+/* Navigasi tetap sama agar konsisten */
+nav {
+    background-color: var(--primary);
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+}
+
+nav a:hover { color: var(--accent); }
+
+.box {
+    width: 500px;
+    margin: 50px auto;
+    background: var(--white);
+    padding: 20px;
+    border-radius: 20px;
+    border-top: 10px solid var(--primary);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+/* Tabel Form & Kalkulator agar Senada */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+th {
+    background: var(--primary); /* Ungu Yulinda */
+    color: white;
+    padding: 15px;
+    border-radius: 10px 10px 0 0;
+}
+
+td {
+    padding: 12px;
+    background: #fffafa; /* Putih kemerahan lembut */
+    color: #4a4a4a;
+    border: 1px solid var(--secondary);
+}
+
+input[type="text"], select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid var(--secondary);
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+button {
+    padding: 10px 20px;
+    background: var(--primary);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    width: 100%;
+}
+
+button:hover {
+    background: #803d5f;
+}
+</style>
+
+<script>
+function hitung() {
+    var a = parseFloat(document.getElementById("angka1").value);
+    var b = parseFloat(document.getElementById("angka2").value);
+    var op = document.getElementById("operator").value;
+    var hasil;
+
+    if (isNaN(a) || isNaN(b)) {
+        alert("Harap masukkan angka yang valid!");
+        return;
+    }
+
+    if(op == "+"){
+        hasil = a + b;
+    } else if(op == "-"){
+        hasil = a - b;
+    } else if(op == "*"){
+        hasil = a * b;
+    } else if(op == "/"){
+        hasil = a / b;
+    }
+
+    alert("Hasil: " + hasil);
+}
+</script>
+
+</head>
+
+<body>
+
+<nav>
+    <a href="index.html">Beranda</a>
+    <a href="pendidikan.html">Pendidikan</a>
+    <a href="skil.html">Skill</a>
+    <a href="layout.html">Layout Table</a>
+   <a href="kalkulator&form.html">Kalkulator&form</a>
+</nav>
+
+<div class="box">
+    <form>
+        <table>
+            <tr><th colspan="2">Form Pendaftaran</th></tr>
+            <tr><td>Nama</td><td><input type="text"></td></tr>
+            <tr><td>Alamat</td><td><input type="text"></td></tr>
+            <tr>
+                <td>Jenis Kelamin</td>
+                <td>
+                    <input type="radio" name="jk"> Pria
+                    <input type="radio" name="jk"> Wanita
+                </td>
+            </tr>
+            <tr>
+                <td>Pekerjaan</td>
+                <td>
+                    <select>
+                        <option>Pelajar</option>
+                        <option>Mahasiswa</option>
+                        <option>Pegawai</option>
+                        <option>Wiraswasta</option>
+                    </select>
+                </td>
+            </tr>
+            <tr><td colspan="2"><button type="submit">Kirim Sekarang</button></td></tr>
+        </table>
+    </form>
+
+    <table>
+        <tr><th colspan="2">Kalkulator Pintar</th></tr>
+        <tr><td>Angka 1</td><td><input type="text" id="angka1" placeholder="0"></td></tr>
+        <tr><td>Angka 2</td><td><input type="text" id="angka2" placeholder="0"></td></tr>
+        <tr>
+            <td>Operator</td>
+            <td>
+                <select id="operator" style="width: 45%; display: inline-block;">
+                    <option value="+">+</option>
+                    <option value="-">-</option>
+                    <option value=""></option>
+                    <option value="/">/</option>
+                </select>
+                <button onclick="hitung()" style="width: 50%; display: inline-block; float: right;">Hitung</button>
+            </td>
+        </tr>
+    </table>
+</div>
+
+</body>
+</html>
